@@ -49,7 +49,7 @@ function Dashboard() {
         </div>
 
         <div className="col-span-3 p-4">
-          <div className=" relative">
+          <div className=" relative ml-24">
             <img
               src="src/assets/DashImg1.png"
               alt="Batman Dark Night"
@@ -64,24 +64,24 @@ function Dashboard() {
             <div className="absolute top-[36vh] left-6 px-4 py-2 font-extrabold text-3xl font-mono">
               The Dark Night
             </div>
-            <button className="absolute top-[37vh] left-[75%] -translate-x-1/2 rounded-full bg-blue-600 px-8 py-2 font-semibold cursor-pointer hover:bg-blue-700 transition">
+            <button className="absolute top-[37vh] left-[45%] -translate-x-1/2 rounded-full bg-blue-600 px-8 py-2 font-semibold cursor-pointer hover:bg-blue-700 transition">
               Read Now
             </button>
           </div>
 
-          <div className="relative px-4 mt-4">
+          <div className="relative px-1 mt-4">
             <div className="text-xl font-semibold ml-20 pt-6 mb-4">Top Rated Comics</div>
             <Cards />
           </div>
         </div>
 
-        <div className="col-span-1 p-4 h-72 pt-4 flex flex-col items-center">
+        {/* <div className="col-span-1 p-4 h-72 pt-4 flex flex-col items-center">
           <h2 className="text-lg font-semibold ">Continue Reading</h2>
           <img src="src/assets/progress.png" alt="Reading Progress" 
           className="w-24"/>
           <p className="px-2 py-1 ">Kobra Kai: Ultimate</p>
-              {/*  progress percentage add karna h */}
-        </div>
+               progress percentage add karna h */}
+        {/* </div> */}
       </div>
     </div>
   );

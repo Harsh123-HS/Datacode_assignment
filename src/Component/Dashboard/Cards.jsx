@@ -26,11 +26,11 @@ const cardsData = [
 function Cards() {
   return (
     <>
-      <div className="flex flex-row gap-4 ml-20">
+      <div className="flex flex-row gap-2">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-2 rounded-3xl flex flex-col items-center"
+            className="bg-gray-800 p-1 ml-20 rounded-3xl flex flex-col items-center"
           >
             <img
               src={card.img}
