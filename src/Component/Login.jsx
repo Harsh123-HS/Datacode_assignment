@@ -10,36 +10,36 @@ const HandleClick =()=>{
   return (
     <>
       <div className="w-screen h-screen">
-        <div className="grid bg-gray-800 grid-cols-[46%_54%] h-screen">
-          <div className="col-span-1 p-3 flex justify-center items-center w-[100%]  ">
+        <div className="grid bg-gray-800 md:grid-cols-[46%_54%] md:h-screen h-full">
+          <div className="col-span-1 p-3 flex justify-center items-center md:w-[100%] w-full ">
             <form action="" className="grid place-items-center  "> 
               <div
                 className="ml-10 "
               >
                 <img src="src\assets\logo-text.png" alt="" 
-                className="px-3 py-1 ml-24 mb-8"/>
+                className="px-3 py-1 md:ml-24 ml-8 mb-8"/>
 
-                <p className="py-4 text-white text-3xl font-serif ml-16 ">Login in to Get Inside</p>
+                <p className="md:py-4 py-4  text-white md:text-3xl text-2xl font-serif md:ml-16 ml-4">Login in to Get Inside</p>
                 <input type="text" placeholder="Email" 
-                className="mb-5 px-3 py-1 m-2 w-96 h-12 text-white rounded-md border-2 outline-none bg-gray-800 border-white"/>
+                className="mb-5 px-3 py-1 m-2 md:w-96 w-64 h-12 text-white rounded-md border-2 outline-none bg-gray-800 border-white"/>
           <br/>
               
                 <input ty90pe="password" placeholder="Password" 
-                  className="mb-5 px-3 py-1 m-2 h-12 w-96 text-white rounded-md border-2 outline-none bg-gray-800 border-white"
+                  className="mb-5 px-3 py-1 m-2 h-12 md:w-96 w-64 text-white rounded-md border-2 outline-none bg-gray-800 border-white"
                 />
-                <p className="text-white ml-20">Don't have account? <span className="text-blue-600 cursor-pointer"
+                <p className="text-white md:ml-20 ml-2">Don't have account? <span className="text-blue-600 cursor-pointer"
                 onClick={()=>HandleClick()}
                 >Register</span> Here</p>
                 <br/>
                 <input type="button" value="Login" 
-                className="mb-5 px-2 py-1 m-2 h-12 w-36 ml-32 rounded-3xl text-white border-2 outline-none border-white bg-blue-600 hover:bg-blue-400 hover:cursor-pointer hover:text-black"
+                className="md:mb-5 md:px-2 px-16 py-1 m-2 h-12 md:w-36 md:ml-32 rounded-3xl text-white border-2 outline-none border-white bg-blue-600 hover:bg-blue-400 hover:cursor-pointer hover:text-black"
                 />
               </div>
             </form>
           </div>
 
-          <div className="col-span-1 bg-green-200 w-[100%] ">
-            <img src="./src/assets/MaskGroup.png" alt="" className="w-[90vw] h-[100vh] left-0 bg-gray-800  object-cover"/>
+          <div className="col-span-1 bg-green-200 md:w-[100%] hidden wifull ">
+            <img src="./src/assets/MaskGroup.png" alt="" className="md:w-[90vw] h-[100vh] left-0 bg-gray-800  object-cover"/>
           </div>
         </div>
       </div>

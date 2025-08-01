@@ -26,7 +26,7 @@ const cardsData = [
 function Cards() {
   return (
     <>
-      <div className="flex flex-row gap-1">
+      <div className="flex flex-row gap-1 mx-8">
         {cardsData.map((card, index) => (
           <div
             key={index}
@@ -35,7 +35,7 @@ function Cards() {
             <img
               src={card.img}
               alt={card.title}
-              className="w-56 rounded-3xl  transition duration-200 hover:scale-105 hover:shadow-lg"
+              className="w-64 rounded-3xl  transition duration-200 hover:scale-105 hover:shadow-lg"
             />
             <div className="p-1 ml-1 w-full">
               <p className="text-blue-700 font-thin font-serif">{card.title}</p>
