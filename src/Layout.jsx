@@ -1,13 +1,20 @@
 import React from "react";
 import Header from "./Component/Header";
-import { Outlet } from "react-router-dom";
-function Layout(){
-    return(
-        <>
-            <Header/>
-            <Outlet/>
-        </>
-    )
+import { Outlet, useLocation } from "react-router-dom";
+
+function Layout() {
+  const location = useLocation();
+
+  const noHeaderPaths = ["/login"];
+
+  const hideHeader = noHeaderPaths.includes(location.pathname.toLowerCase());
+
+  return (
+    <div>
+      {!hideHeader && <Header />}
+      <Outlet />
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

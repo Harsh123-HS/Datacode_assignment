@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: "", element: <Dashboard/> },
+      { index: true, element: <Dashboard /> },
       { path: "Login", element: <Login /> }
     ],
   },
@@ -22,4 +22,4 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>
-)
+);

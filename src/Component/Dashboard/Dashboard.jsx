@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import Cards from "./Cards";
+import { Link, Links, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Dashboard() {
   const [isActive, setIsActive] = useState("Dashboard");
+  const navigate = useNavigate();
+
+  const HandleLogin = () => {
+      navigate("/Login");
+    
+  };
 
   return (
     <div className="bg-gray-800 min-h-screen text-white">
@@ -19,29 +28,43 @@ function Dashboard() {
                   onClick={() => setIsActive(item)}
                 >
                   <img
-                    src={`./src/assets/${item === "MyColl" ? "mycoll" : item.toLowerCase()}.png`}
+                    src={`./src/assets/${
+                      item === "MyColl" ? "mycoll" : item.toLowerCase()
+                    }.png`}
                     alt={item}
                     className="w-6 h-6"
                   />
-                  <span className="text-lg">{item === "MyColl" ? "My Collection" : item}</span>
+                  <span className="text-lg">
+                    {item === "MyColl" ? "My Collection" : item}
+                  </span>
                 </div>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              {["Settings", "LogOut"].map((item) => (
+              {["Settings", "Login"].map((item) => (
                 <div
                   key={item}
                   className={`flex items-center pl-12 gap-4 p-2 rounded-lg cursor-pointer ${
                     isActive === item ? "bg-blue-500" : "bg-gray-800"
                   }`}
-                  onClick={() => setIsActive(item)}
+                  onClick={() => {setIsActive(item)
+                    if(item === "Login") HandleLogin();
+                  }
+                }
                 >
                   <img
-                    src={`./src/assets/${item === "LogOut" ? "logout" : "setting"}.png`}
-                    alt={item === "LogOut" ? "Log Out" : "Settings"}
+                    src={`./src/assets/${
+                      item === "Login" ? "Logout" : "setting"
+                    }.png`}
+                    alt={item === "Login" ? "Login" : "Settings"}
                     className="w-6 h-6"
                   />
-                  <span className="text-lg">{item === "LogOut " ? "Log Out" : "Settings"}</span>
+                  <span
+                    className="text-lg"
+                    onClick={(item) => HandleLogin(item)}
+                  >
+                    {item === "Login" ? "Login" : "Settings"}
+                  </span>
                 </div>
               ))}
             </div>
@@ -70,7 +93,9 @@ function Dashboard() {
           </div>
 
           <div className="relative px-1 mt-4">
-            <div className="text-xl font-semibold ml-20 pt-6 mb-4">Top Rated Comics</div>
+            <div className="text-xl font-semibold ml-20 pt-6 mb-4">
+              Top Rated Comics
+            </div>
             <Cards />
           </div>
         </div>
