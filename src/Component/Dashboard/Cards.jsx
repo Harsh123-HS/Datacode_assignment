@@ -30,12 +30,12 @@ function Cards() {
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-4 ml-20 rounded-3xl flex flex-col items-center"
+            className="bg-gray-800 p-1 ml-20 rounded-3xl flex flex-col items-center"
           >
             <img
               src={card.img}
               alt={card.title}
-              className="w-48 rounded-3xl  transition duration-200 hover:scale-105 hover:shadow-lg"
+              className="w-56 rounded-3xl  transition duration-200 hover:scale-105 hover:shadow-lg"
             />
             <div className="p-1 ml-1 w-full">
               <p className="text-blue-700 font-thin font-serif">{card.title}</p>

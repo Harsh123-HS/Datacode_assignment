@@ -93,7 +93,7 @@ function Dashboard() {
           </div>
 
           <div className="relative px-1 mt-4">
-            <div className="text-xl font-semibold ml-20 pt-6 mb-4">
+            <div className="text-xl font-semibold ml-24 pt-2 mb-4">
               Top Rated Comics
             </div>
             <Cards />
